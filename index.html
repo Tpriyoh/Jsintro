@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+	<h1>Lets learn JS</h1>
+	<script>
+		// alert("hello world");
+		console.log("hey you!");
+
+		x = 15;
+		y = 5;
+		console.log(x + y);
+		console.log(x * y);
+		console.log(x / y);
+		console.log(x - y);
+		x = x + 1;
+		console.log(x);
+		++x;
+		console.log(x);
+		--x;
+		console.log(x);
+		y = y + 15;
+		console.log(y);
+		y -= 15;
+		console.log(y);
+		console.log(50 + 100 / 10);
+		console.log((50 + 100) / 10);
+		// parenthesis, exponents, multiplication, division, addition, subtraction. is the order of operation
+
+		a = false;
+		console.log(a);
+		console.log(!a);
+
+		m = "marco";
+		p = ' polo';
+		f = m + ' ' + p;
+		console.log(m);
+		document.write(m + ' ' + p);
+		document.write('<br>');
+		document.write("1" + '2');
+		document.write('<br>');
+		document.write(1 + Number('2'));
+		document.write('<br>');
+		document.write("i heard \"she said, \'meet me there\'\"");
+		document.write('<br>');
+		longstr = "The quick brown fox jumps over the lazy dog.";
+		lsl = longstr.length;
+		document.write(lsl);
+		document.write('<br>');
+		document.write(longstr[0]);
+		document.write('<br>');
+		document.write(longstr.slice(40, 43));
+		document.write('<br>');
+		document.write(longstr.substr(40, 3));
+		document.write('<br>');
+		document.write(longstr.substr(-4, 3));
+		document.write('<br>');
+		document.write(longstr.replace('fox', 'zorro'));
+		document.write('<br>');
+		document.write(longstr.replace('o', 'a'));
+		document.write('<br>');
+		document.write(longstr.replace(/o/g, 'a'));
+		document.write('<br>');
+		document.write(longstr.split(" "));
+		document.write('<br>');
+		console.log(longstr.split(" "));
+		lsa = longstr.split(" ");
+		console.log(lsa);
+		arr = ['dad', 'mom', 'child'];
+		console.log(arr[0]);
+		console.log(arr.indexOf('uncle'));
+		arr.push('uncle');
+		arr[6] = "aunt";
+		console.log(arr.length);
+		//
+		instruments = ['guitar','drums','bass'];
+        genre = ['rock','hip hop','classical'];
+		mhobbies = [instruments,genre];
+		console.log(mhobbies[1] [2]);
+		
+		superhero = {
+        fname:'Clark',
+        lname:'Kent',
+        hname:'Super man',
+        glasses:false,
+        powers:12,
+        weaknesses:2
+    };
+		console.log(superhero['hname']);
+		console.log(superhero.powers);
+		superhero['villan'] = "lex luthor";
+		superhero.powers = 13;
+		console.log (5 === "5"); // 1 = means its assigned to a var 2 is for comparason 3 is for datatypes which both needs to be true to get the true result.
+		console.log (5 > 10);
+		console.log (5 < 10);
+		console.log (5 >= 10);
+		console.log (5 <= 10);
+		console.log('logicals')
+		console.log ((5 > 10) || (5 == 5));
+		//
+		myColor="yellow";
+		if (myColor =="Green"){
+			document.write(myColor + " Is my favorite color");
+		} else if(myColor =='yellow' || myColor == "Moth") {
+			document.write(myColor + " Is my LEAST favorite color");
+		} 
+		else{
+			document.write(myColor + " Is my NOT favorite color");
+		}
+		
+		switch(myColor){
+			case 'Green':
+			   console.log(myColor + " Is my favorite color");
+				break;
+			case 'yellow':
+			case 'Moth':
+				console.log(myColor + " Is my LEAST favorite color");
+				break;
+			  default:
+				console.log(myColor + " Is NOT my favorite color");
+			}
+		exFunc = function (p1){             //anonimious function
+			document.write(p1 * 10);
+		}
+		var num1 = 100;
+		
+		function playfunc(){
+			no1 = num1;
+			no2 = 1;
+			document.write('<br>');
+			document.write("Lets add together: ");
+			document.write(no1 + no2);
+			exFunc(2);
+			var test = "ping";
+			document.write(test);
+		}
+		playfunc();
+		function sum10(n1,n2){
+			return(n1 + n2) * 10;
+		}
+		
+		//loops
+		
+		for(i = 0; i < 10; ++i){
+			document.write(i +"<br>");
+		}
+		ppl = ['John', 'peter', 'mary', 'sue']
+		for(t = 0; t < ppl.length; ++t){
+			document.write(t + ": " + ppl[t]+"<br>");
+		}
+		bi = 0;
+		while(bi < ppl.length){
+			  document.write(bi + ": " + ppl[bi]+ "<br>");
+			++bi;
+			  }
+		okv = "";
+		for(key in superhero){
+			okv +=" | "+superhero[key];
+			document.write("<p>"+okv+"</p>");
+		}
+	</script>
+</body>
+</html>
